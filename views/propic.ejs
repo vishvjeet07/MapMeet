@@ -1,0 +1,17 @@
+<%- include('./partials/header') %>
+<div class="flex items-center justify-center min-h-screen">
+    <form action="/users/uploadpro" method="post" enctype="multipart/form-data" class="p-4 bg-white rounded-md shadow-md w-80 space-y-3 border border-gray-200">
+        <span class="block text-sm font-medium text-gray-600">Upload Profile Picture</span>
+        <label for="img" class="flex flex-col items-center justify-center w-full h-36 border border-dashed border-gray-300 rounded-md cursor-pointer hover:border-purple-500 hover:bg-purple-50 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18M10 12h8m-4-4v8" />
+            </svg>
+            <span class="text-xs text-gray-400">Click to upload or drag & drop</span>
+            <input type="file" name="image" id="img" class="hidden" />
+        </label>
+        <button type="submit" class="w-full py-2 bg-purple-600 rounded-md text-white text-sm font-medium hover:bg-purple-700 transition">
+            Submit
+        </button>
+    </form>
+</div>
+<%- include('./partials/footer') %>

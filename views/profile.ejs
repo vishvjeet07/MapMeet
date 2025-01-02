@@ -1,0 +1,22 @@
+<%- include('./partials/header') %>
+<div class="bg-gray-50 rounded-lg shadow-lg m-auto mt-28 p-6 w-full max-w-sm text-center">
+    <!-- Profile Picture -->
+    <div class="flex justify-center mb-4">
+        <img src="data:image/jpeg;base64,<%= user.image.toString('base64') %>" alt="Profile Picture" 
+            class="w-24 h-24 rounded-full shadow-md object-cover">
+    </div>
+
+    <!-- Profile Heading -->
+    <h1 class="text-2xl font-bold text-gray-800 mb-4">Profile</h1>
+
+    <!-- Name -->
+    <p class="text-gray-800 text-lg mb-2">
+        <span class="font-medium text-gray-600">Name:</span> <%= user.username %>
+    </p>
+
+    <!-- Email -->
+    <p class="text-gray-800 text-lg">
+        <span class="font-medium text-gray-600">Email:</span> <%= user.email %>
+    </p>
+</div>
+<%- include('./partials/footer') %>
